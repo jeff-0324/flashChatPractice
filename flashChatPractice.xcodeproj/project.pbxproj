@@ -17,6 +17,7 @@
 		F959993F2AB82869003F48DD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959993E2AB82869003F48DD /* RegisterViewController.swift */; };
 		F95999412AB82886003F48DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95999402AB82886003F48DD /* LoginViewController.swift */; };
 		F95999432AB828A5003F48DD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95999422AB828A5003F48DD /* ChatViewController.swift */; };
+		F95999482AB89AC3003F48DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F95999472AB89AC3003F48DD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F959993E2AB82869003F48DD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F95999402AB82886003F48DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F95999422AB828A5003F48DD /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		F95999472AB89AC3003F48DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				F95999332AB4BF83003F48DD /* Assets.xcassets */,
 				F95999352AB4BF83003F48DD /* LaunchScreen.storyboard */,
 				F95999382AB4BF83003F48DD /* Info.plist */,
+				F95999472AB89AC3003F48DD /* GoogleService-Info.plist */,
 			);
 			path = flashChatPractice;
 			sourceTree = "<group>";
@@ -135,7 +138,7 @@
 				F95999232AB4BF82003F48DD /* Sources */,
 				F95999242AB4BF82003F48DD /* Frameworks */,
 				F95999252AB4BF82003F48DD /* Resources */,
-				41C00FCE6B53BFC895CAADC4 /* [CP] Embed Pods Frameworks */,
+				4EBAA319ED951494293B4896 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F95999372AB4BF83003F48DD /* LaunchScreen.storyboard in Resources */,
+				F95999482AB89AC3003F48DD /* GoogleService-Info.plist in Resources */,
 				F95999342AB4BF83003F48DD /* Assets.xcassets in Resources */,
 				F95999322AB4BF82003F48DD /* Main.storyboard in Resources */,
 			);
@@ -193,7 +197,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		41C00FCE6B53BFC895CAADC4 /* [CP] Embed Pods Frameworks */ = {
+		4EBAA319ED951494293B4896 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

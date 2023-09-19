@@ -48,7 +48,7 @@
                                     <segue destination="59C-7R-gKg" kind="show" id="qu3-8E-y1S"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmc-NZ-pJP" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmc-NZ-pJP">
                                 <rect key="frame" x="42.666666666666657" y="396" width="308" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
                                 <color key="textColor" name="BrandBlue"/>
@@ -120,8 +120,7 @@
                                             <color key="titleColor" name="BrandBlue"/>
                                         </state>
                                         <connections>
-                                            <action selector="regisetButtonTapped:" destination="BxQ-aH-YZj" eventType="touchUpInside" id="V1j-JD-ShM"/>
-                                            <action selector="registerPressed:" destination="BxQ-aH-YZj" eventType="touchUpInside" id="hm5-Fi-oJ1"/>
+                                            <action selector="registerButtonTapped:" destination="BxQ-aH-YZj" eventType="touchUpInside" id="8Ao-JH-fAH"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="oxK-xn-KBt">
@@ -166,7 +165,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="I7k-TE-bqy" id="bZr-pm-P7K"/>
                         <outlet property="passwordTextfield" destination="6gE-hJ-n50" id="Gua-Zl-kmE"/>
-                        <segue destination="Y2a-cC-Kh0" kind="show" identifier="RegisterToChat" id="A8A-nQ-UpY"/>
+                        <segue destination="Y2a-cC-Kh0" kind="show" identifier="RegisterToChat" id="wfk-3L-1U4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJY-hw-e4d" sceneMemberID="firstResponder"/>
@@ -187,7 +186,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="DLY-L2-nYg">
                                         <rect key="frame" x="0.0" y="20" width="393" height="137"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="taK-d8-Z3I">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="abc1@abc.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="taK-d8-Z3I">
                                         <rect key="frame" x="49" y="51" width="296" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -212,7 +211,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="LTK-1j-7JA">
                                         <rect key="frame" x="0.0" y="20" width="393" height="137"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WeL-At-Sii">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WeL-At-Sii">
                                         <rect key="frame" x="49" y="48" width="296" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -226,7 +225,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButtonTapped:" destination="59C-7R-gKg" eventType="touchUpInside" id="EUE-s4-5Ah"/>
-                                            <action selector="loginPressed:" destination="59C-7R-gKg" eventType="touchUpInside" id="dRt-Uk-D16"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -292,7 +290,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zsf-Bc-oPQ">
-                                <rect key="frame" x="0.0" y="758" width="393" height="60"/>
+                                <rect key="frame" x="0.0" y="758" width="393" height="94"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ske-V7-SX1">
                                         <rect key="frame" x="20" y="20" width="293" height="40"/>
@@ -321,26 +319,32 @@
                                 <constraints>
                                     <constraint firstItem="yKI-BS-cmi" firstAttribute="leading" secondItem="ske-V7-SX1" secondAttribute="trailing" constant="20" id="3QA-Sv-g8y"/>
                                     <constraint firstItem="yKI-BS-cmi" firstAttribute="top" secondItem="Zsf-Bc-oPQ" secondAttribute="top" constant="20" id="5wI-ER-T7L"/>
+                                    <constraint firstAttribute="height" constant="94" id="9Zy-TO-sId"/>
                                     <constraint firstAttribute="trailing" secondItem="yKI-BS-cmi" secondAttribute="trailing" constant="20" id="Jyi-OU-4ax"/>
                                     <constraint firstItem="ske-V7-SX1" firstAttribute="leading" secondItem="Zsf-Bc-oPQ" secondAttribute="leading" constant="20" id="VaN-nv-pIs"/>
-                                    <constraint firstAttribute="height" constant="60" id="ppE-6y-7ah"/>
                                     <constraint firstItem="ske-V7-SX1" firstAttribute="top" secondItem="Zsf-Bc-oPQ" secondAttribute="top" constant="20" id="vVH-jv-DC5"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YcK-jz-gat"/>
-                        <color key="backgroundColor" name="BrandPurple"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Zsf-Bc-oPQ" firstAttribute="trailing" secondItem="YcK-jz-gat" secondAttribute="trailing" id="Ymx-eU-cQx"/>
                             <constraint firstItem="Zsf-Bc-oPQ" firstAttribute="top" secondItem="R2D-VI-sfY" secondAttribute="bottom" id="YqR-u1-hG9"/>
                             <constraint firstItem="R2D-VI-sfY" firstAttribute="trailing" secondItem="YcK-jz-gat" secondAttribute="trailing" id="blQ-4b-3Ri"/>
-                            <constraint firstItem="Zsf-Bc-oPQ" firstAttribute="bottom" secondItem="YcK-jz-gat" secondAttribute="bottom" id="eOT-I6-5xu"/>
+                            <constraint firstItem="Zsf-Bc-oPQ" firstAttribute="bottom" secondItem="vt9-yH-Cap" secondAttribute="bottom" id="eOT-I6-5xu"/>
                             <constraint firstItem="Zsf-Bc-oPQ" firstAttribute="leading" secondItem="YcK-jz-gat" secondAttribute="leading" id="pfQ-4z-Wgn"/>
                             <constraint firstItem="R2D-VI-sfY" firstAttribute="leading" secondItem="YcK-jz-gat" secondAttribute="leading" id="r88-pH-kjN"/>
                             <constraint firstItem="R2D-VI-sfY" firstAttribute="top" secondItem="YcK-jz-gat" secondAttribute="top" id="znh-xK-srv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="xCQ-3a-olH"/>
+                    <navigationItem key="navigationItem" title="Title" id="xCQ-3a-olH">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="oF1-QY-p0M">
+                            <connections>
+                                <action selector="logOutButtonTapped:" destination="Y2a-cC-Kh0" id="3bq-Ps-uMW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextfield" destination="ske-V7-SX1" id="rs6-TA-0Kn"/>
                         <outlet property="tableView" destination="R2D-VI-sfY" id="UVO-zw-02e"/>
@@ -369,11 +373,6 @@
             <point key="canvasLocation" x="61.832061068702288" y="-100"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="pmc-NZ-pJP">
-            <size key="intrinsicContentSize" width="307.33333333333331" height="60"/>
-        </designable>
-    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="Yo9-h7-R7Y"/>
     </inferredMetricsTieBreakers>
