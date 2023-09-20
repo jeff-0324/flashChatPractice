@@ -18,6 +18,10 @@
 		F95999412AB82886003F48DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95999402AB82886003F48DD /* LoginViewController.swift */; };
 		F95999432AB828A5003F48DD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95999422AB828A5003F48DD /* ChatViewController.swift */; };
 		F95999482AB89AC3003F48DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F95999472AB89AC3003F48DD /* GoogleService-Info.plist */; };
+		F97428912AB9C15A002E3D35 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97428902AB9C15A002E3D35 /* Constant.swift */; };
+		F97428932AB9DE80002E3D35 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97428922AB9DE80002E3D35 /* Message.swift */; };
+		F97428962ABA0A70002E3D35 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97428942ABA0A70002E3D35 /* MessageCell.swift */; };
+		F97428972ABA0A70002E3D35 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97428952ABA0A70002E3D35 /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		F95999402AB82886003F48DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F95999422AB828A5003F48DD /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F95999472AB89AC3003F48DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F97428902AB9C15A002E3D35 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		F97428922AB9DE80002E3D35 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F97428942ABA0A70002E3D35 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		F97428952ABA0A70002E3D35 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 			children = (
 				F959992A2AB4BF82003F48DD /* AppDelegate.swift */,
 				F959992C2AB4BF82003F48DD /* SceneDelegate.swift */,
+				F97428902AB9C15A002E3D35 /* Constant.swift */,
 				F95999452AB886E0003F48DD /* Model */,
 				F95999462AB886E7003F48DD /* View */,
 				F95999442AB886C6003F48DD /* Controller */,
@@ -115,6 +124,7 @@
 		F95999452AB886E0003F48DD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F97428922AB9DE80002E3D35 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				F95999302AB4BF82003F48DD /* Main.storyboard */,
+				F97428942ABA0A70002E3D35 /* MessageCell.swift */,
+				F97428952ABA0A70002E3D35 /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97428972ABA0A70002E3D35 /* MessageCell.xib in Resources */,
 				F95999372AB4BF83003F48DD /* LaunchScreen.storyboard in Resources */,
 				F95999482AB89AC3003F48DD /* GoogleService-Info.plist in Resources */,
 				F95999342AB4BF83003F48DD /* Assets.xcassets in Resources */,
@@ -243,12 +256,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97428912AB9C15A002E3D35 /* Constant.swift in Sources */,
 				F959993F2AB82869003F48DD /* RegisterViewController.swift in Sources */,
 				F959992F2AB4BF82003F48DD /* WelcomeViewController.swift in Sources */,
 				F959992B2AB4BF82003F48DD /* AppDelegate.swift in Sources */,
 				F95999412AB82886003F48DD /* LoginViewController.swift in Sources */,
+				F97428932AB9DE80002E3D35 /* Message.swift in Sources */,
 				F95999432AB828A5003F48DD /* ChatViewController.swift in Sources */,
 				F959992D2AB4BF82003F48DD /* SceneDelegate.swift in Sources */,
+				F97428962ABA0A70002E3D35 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
