@@ -13,11 +13,9 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
-    var message : [Message] = [
-    Message(sender: "abc1@abc.com", body: "hey!"),
-    Message(sender: "a1@abc.com", body: "Hi!"),
-    Message(sender: "abc1@abc.com", body: "What's up?"),
-    ]
+    let db = Firestore.firestore()
+    
+    var message : [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +26,47 @@ class ChatViewController: UIViewController {
         
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         
+        loadMessages()
     }
-    
-    @IBAction func sendButtonTapped(_ sender: UIButton) {
+    func loadMessages() {
+        db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener({ querySnapshop, error in
+            self.message = []
+            
+            if let e = error {
+                print("There was an issue retrieving data from firestore. \(e)")
+            } else {
+                if let snapshopDoucuments = querySnapshop?.documents {
+                    for doc in snapshopDoucuments {
+                        let data = doc.data()
+                        if let messageSender = data[K.FStore.senderField] as?  String, let messageBody = data[K.FStore.bodyField] as? String {
+                            let newMessage = Message(sender: messageSender, body: messageBody)
+                            self.message.append(newMessage)
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
         
+        })
+            
+    }
+    @IBAction func sendButtonTapped(_ sender: UIButton) {
+        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
+            db.collection(K.FStore.collectionName).addDocument(data: [
+                K.FStore.senderField : messageSender,
+                K.FStore.bodyField : messageBody,
+                K.FStore.dateField : Date().timeIntervalSince1970
+            ]) { (error) in
+                if let e = error {
+                    print("There was an issue saving data from firestrore \(e)")
+                } else {
+                    print("Successfully saved data.")
+                }
+            }
+        }
         
     }
     
